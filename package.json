@@ -1,7 +1,7 @@
 {
   "name": "youtube-analytics-platform",
   "version": "1.0.0",
-  "description": "A comprehensive web application for analyzing YouTube channels and videos for educational and benchmarking purposes",
+  "description": "Ministry YouTube analytics for KJV right-division Bible teachers — rightly dividing the word of truth (2 Timothy 2:15)",
   "private": true,
   "scripts": {
     "dev": "next dev",

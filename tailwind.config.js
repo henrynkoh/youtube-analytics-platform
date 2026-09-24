@@ -98,7 +98,8 @@ module.exports = {
         "pulse-slow": "pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "Outfit", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Fraunces", "Georgia", "serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       spacing: {
