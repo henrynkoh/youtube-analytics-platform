@@ -21,7 +21,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[var(--ink)]/95 text-[var(--text)] backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[var(--ink)] text-[var(--text)]">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex h-16 justify-between">
           <div className="flex">
