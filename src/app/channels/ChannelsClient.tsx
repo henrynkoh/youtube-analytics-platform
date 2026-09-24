@@ -50,7 +50,7 @@ export default function ChannelsClient() {
               id="channelUrl"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="e.g., https://youtube.com/@ohhenry6524"
+              placeholder="e.g., https://youtube.com/@사랑과오래참음으로"
               className="input flex-grow"
             />
             <button type="submit" className="btn-ink shrink-0">

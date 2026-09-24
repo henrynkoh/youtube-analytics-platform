@@ -13,10 +13,10 @@ export type RightDivisionChannel = {
 };
 
 export const MINISTRY_CHANNEL: RightDivisionChannel = {
-  id: 'ohhenry6524',
-  name: 'Oh Henry',
-  handle: '@ohhenry6524',
-  url: 'https://www.youtube.com/@ohhenry6524',
+  id: 'love-longsuffering',
+  name: '사랑과 오래참음으로',
+  handle: '@사랑과 오래참음으로',
+  url: 'https://www.youtube.com/@사랑과오래참음으로',
   focus: 'KJV right division · 12-week study series',
   ministry: 'Rightly Dividing the Word of Truth',
 };
