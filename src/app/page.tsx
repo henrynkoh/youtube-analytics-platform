@@ -1,108 +1,135 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import MainLayout from '@/components/MainLayout';
+import {
+  MINISTRY_CHANNEL,
+  STUDY_HUB_URL,
+  VERSE_REF,
+  VERSE_TEXT,
+} from '@/lib/right-division-channels';
 
 export default function Home() {
   return (
     <MainLayout>
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                YouTube Analytics Platform
-              </h1>
-              <p className="text-xl mb-8">
-                Transform your YouTube strategy with comprehensive analytics, competitive benchmarking, and AI-powered insights.
-              </p>
-              <div className="flex space-x-4">
-                <Link href="/dashboard" className="btn-primary bg-white text-blue-700 hover:bg-gray-100">
-                  Get Started
-                </Link>
-                <Link href="/education" className="btn-secondary bg-transparent border border-white hover:bg-white/10">
-                  Learn More
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/2">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                {/* Placeholder for dashboard screenshot */}
-                <div className="bg-gray-800 p-8 text-center h-80 flex items-center justify-center">
-                  <span className="text-2xl">Analytics Dashboard Preview</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Hero — one composition: brand, headline, support, CTAs, full-bleed visual */}
+      <section className="relative min-h-[100svh] overflow-hidden text-[var(--text)]">
+        <div className="absolute inset-0 rd-glow" aria-hidden />
+        <div className="absolute inset-0 rd-grid opacity-40" aria-hidden />
+        <div
+          className="absolute -right-24 top-1/4 h-[420px] w-[420px] rounded-full bg-[var(--gold)]/10 blur-3xl animate-rd-pulse"
+          aria-hidden
+        />
 
-      {/* Features Section */}
-      <div className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Powerful Features</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="card">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Channel Analysis</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Comprehensive metrics including subscriber count, view velocity, engagement rates, and growth tracking.
-              </p>
-            </div>
-            
-            {/* Feature 2 */}
-            <div className="card">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Video Analysis</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Detailed performance metrics, SEO optimization, engagement analysis, and content quality assessment.
-              </p>
-            </div>
-            
-            {/* Feature 3 */}
-            <div className="card">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Benchmarking System</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Compare against similar channels with competitive analysis, performance ranking, and actionable insights.
-              </p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link href="/dashboard" className="btn-primary">
-              Explore All Features
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="bg-blue-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to transform your YouTube strategy?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of content creators who are using our platform to grow their channels and optimize their content.
+        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-6 py-24 md:px-10">
+          <p className="font-display animate-rd-fade-up text-3xl tracking-tight text-[var(--gold)] sm:text-4xl md:text-5xl">
+            Rightly Dividing
           </p>
-          <Link href="/auth/register" className="btn-primary bg-white text-blue-700 hover:bg-gray-100">
-            Sign Up Now
-          </Link>
+          <div className="animate-rd-shear mt-3 h-px w-40 bg-gradient-to-r from-[var(--gold)] to-transparent" />
+
+          <h1 className="font-display animate-rd-fade-up-delay mt-8 max-w-3xl text-3xl leading-tight text-white sm:text-4xl md:text-5xl">
+            the word of truth
+          </h1>
+
+          <p className="animate-rd-fade-up-delay mt-5 max-w-xl text-lg text-[var(--muted)] md:text-xl">
+            Ministry analytics for KJV teachers who measure what they preach —
+            channel growth, sermon reach, and short-form fruit for the grace message.
+          </p>
+
+          <div className="animate-rd-fade-up-delay-2 mt-10 flex flex-wrap gap-4">
+            <Link href="/dashboard" className="btn-primary">
+              Open dashboard
+            </Link>
+            <a
+              href={STUDY_HUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              Study hub
+            </a>
+          </div>
+
+          <p className="animate-rd-fade-up-delay-2 mt-14 max-w-2xl border-l-2 border-[var(--gold)]/50 pl-4 text-sm italic text-[var(--muted)]">
+            “{VERSE_TEXT}” — {VERSE_REF} (KJV)
+          </p>
         </div>
-      </div>
+
+        {/* Full-bleed scripture/atmosphere plane */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[38%] bg-gradient-to-t from-[var(--ink)] via-[var(--ink)]/80 to-transparent"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute bottom-8 right-6 hidden max-w-xs text-right md:block"
+          aria-hidden
+        >
+          <p className="font-display text-6xl leading-none text-white/[0.06]">2 Tim</p>
+          <p className="font-display text-8xl leading-none text-white/[0.08]">2:15</p>
+        </div>
+      </section>
+
+      {/* One job: what this tool does for teachers */}
+      <section className="border-t border-[var(--ink)]/10 bg-[var(--paper)] px-6 py-20 md:px-10">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-display text-3xl text-[var(--ink)] md:text-4xl">
+            Analytics that serve the Word
+          </h2>
+          <p className="mt-4 text-lg text-[var(--ink)]/65">
+            Track how right-division teaching travels on YouTube — without burying the
+            message under vanity metrics.
+          </p>
+        </div>
+
+        <div className="mx-auto mt-14 grid max-w-5xl gap-10 md:grid-cols-3">
+          <div>
+            <h3 className="font-display text-xl text-[var(--ink)]">Channel health</h3>
+            <p className="mt-2 text-[var(--ink)]/65">
+              Subscribers, view velocity, and upload rhythm for grace-age teaching channels.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-display text-xl text-[var(--ink)]">Sermon &amp; Shorts reach</h3>
+            <p className="mt-2 text-[var(--ink)]/65">
+              See which titles, topics, and formats carry Pauline truth farthest.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-display text-xl text-[var(--ink)]">Teacher benchmarks</h3>
+            <p className="mt-2 text-[var(--ink)]/65">
+              Compare against fellow mid-Acts ministries — learn, not compete for applause.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* One job: ministry home channel CTA */}
+      <section className="bg-[var(--ink-2)] px-6 py-20 text-[var(--text)] md:px-10">
+        <div className="mx-auto flex max-w-4xl flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-[var(--gold)]">
+              Home channel
+            </p>
+            <h2 className="font-display mt-2 text-3xl md:text-4xl">
+              {MINISTRY_CHANNEL.handle}
+            </h2>
+            <p className="mt-3 max-w-md text-[var(--muted)]">
+              {MINISTRY_CHANNEL.focus}. Open the dashboard or visit the 12-week study.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/channels" className="btn-primary">
+              Analyze teachers
+            </Link>
+            <a
+              href={MINISTRY_CHANNEL.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              YouTube
+            </a>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
 }

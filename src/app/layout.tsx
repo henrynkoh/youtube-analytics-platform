@@ -1,13 +1,24 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Fraunces, Outfit } from 'next/font/google';
 import { Metadata } from 'next';
 import Providers from '@/components/Providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'YouTube Analytics Platform',
-  description: 'Comprehensive YouTube channel and video analytics for content creators, marketers, and researchers',
+  title: 'Rightly Dividing · Ministry YouTube Analytics',
+  description:
+    'Channel and video analytics for KJV right-division Bible teachers — study to shew thyself approved, rightly dividing the word of truth (2 Timothy 2:15).',
 };
 
 export default function RootLayout({
@@ -17,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${outfit.variable} ${fraunces.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>
