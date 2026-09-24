@@ -15,14 +15,12 @@
   --sky: #38bdf8;
   --paper: #eef1f6;
   --paper-deep: #e2e7ef;
-  --foreground-rgb: 11, 18, 32;
-  --background-start-rgb: 238, 241, 246;
-  --background-end-rgb: 226, 231, 239;
 }
 
 body {
   color: var(--ink);
   background-color: var(--paper);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 @layer base {
@@ -41,38 +39,53 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-5 py-2.5 font-medium
-      bg-[var(--gold)] text-[var(--ink)] rounded-md
-      hover:bg-[var(--gold-soft)] focus:outline-none focus:ring-2
-      focus:ring-[var(--gold)] focus:ring-offset-2 focus:ring-offset-[var(--ink)]
-      transition-colors;
+    @apply inline-flex items-center justify-center px-5 py-2.5 font-medium rounded-md transition-colors;
+    background-color: var(--gold);
+    color: var(--ink);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--gold-soft);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-5 py-2.5 font-medium
-      border border-white/30 text-white rounded-md
-      hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/40
-      transition-colors;
+    @apply inline-flex items-center justify-center px-5 py-2.5 font-medium rounded-md transition-colors;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   .btn-ink {
-    @apply inline-flex items-center justify-center px-5 py-2.5 font-medium
-      bg-[var(--ink)] text-[var(--text)] rounded-md
-      hover:bg-[var(--ink-2)] focus:outline-none focus:ring-2
-      focus:ring-[var(--gold)] transition-colors;
+    @apply inline-flex items-center justify-center px-5 py-2.5 font-medium rounded-md transition-colors;
+    background-color: var(--ink);
+    color: var(--text);
+  }
+
+  .btn-ink:hover {
+    background-color: var(--ink-2);
   }
 
   .input {
-    @apply w-full px-3 py-2 border border-[var(--ink-3)]/20 rounded-md
-      bg-white/80 focus:outline-none focus:ring-2 focus:ring-[var(--gold)];
+    @apply w-full px-3 py-2 rounded-md;
+    border: 1px solid rgba(26, 36, 56, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--gold);
   }
 
   .surface {
-    @apply bg-white/70 backdrop-blur-sm border border-[var(--ink)]/8 rounded-lg p-6;
+    @apply backdrop-blur-sm rounded-lg p-6;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(11, 18, 32, 0.08);
   }
 }
 
-/* Landing atmosphere */
 .rd-glow {
   background:
     radial-gradient(900px 520px at 12% -8%, rgba(212, 168, 75, 0.28), transparent 55%),
